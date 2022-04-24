@@ -1,0 +1,263 @@
+{
+	"info": {
+		"_postman_id": "bbef233f-1e30-4173-a82d-ed3d4a956cc1",
+		"name": "ApiRest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get users",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/apires/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"apires",
+						"users"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get users",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "     {\r\n        \"dni\": 31223454,\r\n        \"nombre\": \"Facundo\",\r\n        \"apellido\": \"guevara\",\r\n        \"direccion\": \"Tucuman 4525\"\r\n    }\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/apires/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"apires",
+								"users"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "[\r\n    {\r\n        \"dni\": 3411113,\r\n        \"nombre\": \"Martin\",\r\n        \"apellido\": \"guevara\",\r\n        \"direccion\": \"Tucuman 4525\"\r\n    },\r\n    {\r\n        \"dni\": 6111113,\r\n        \"nombre\": \"Isidoro\",\r\n        \"apellido\": \"guevara\",\r\n        \"direccion\": \"Tucuman 4525\"\r\n    },\r\n    {\r\n        \"dni\": 11040512,\r\n        \"nombre\": \"Daniel\",\r\n        \"apellido\": \"guevara\",\r\n        \"direccion\": \"Tucuman 4525\"\r\n    },\r\n    {\r\n        \"dni\": 13366367,\r\n        \"nombre\": \"Liliana\",\r\n        \"apellido\": \"guevara\",\r\n        \"direccion\": \"Tucuman 4525\"\r\n    },\r\n    {\r\n        \"dni\": 31223454,\r\n        \"nombre\": \"Facundo\",\r\n        \"apellido\": \"guevara\",\r\n        \"direccion\": \"Tucuman 4525\"\r\n    },\r\n    {\r\n        \"dni\": 34579464,\r\n        \"nombre\": \"federico\",\r\n        \"apellido\": \"guevara\",\r\n        \"direccion\": \"alberti 4525\"\r\n    }\r\n]"
+				}
+			]
+		},
+		{
+			"name": "Probando post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n     {\r\n        \"dni\": 3411113,\r\n        \"nombre\": \"Martin\",\r\n        \"apellido\": \"guevara\",\r\n        \"direccion\": \"Tucuman 4525\"\r\n    }\r\n\r\n\r\n\r\n\r\n\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/apires/users/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"apires",
+						"users",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Probando post",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n     {\r\n        \"dni\": 3411113,\r\n        \"nombre\": \"Martin\",\r\n        \"apellido\": \"guevara\",\r\n        \"direccion\": \"Tucuman 4525\"\r\n    }\r\n\r\n\r\n\r\n\r\n\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/apires/users/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"apires",
+								"users",
+								""
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\r\n    \"dni\": 3411113,\r\n    \"nombre\": \"Martin\",\r\n    \"apellido\": \"guevara\",\r\n    \"direccion\": \"Tucuman 4525\"\r\n}"
+				}
+			]
+		},
+		{
+			"name": "GET user por dni",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/apires/users/34579464",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"apires",
+						"users",
+						"34579464"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GET user por dni",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"dni\": 34579464,\r\n    \"nombre\": \"Martin\",\r\n    \"apellido\": \"guevara\",\r\n    \"direccion\": \" 4525\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/apires/users/34579464",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"apires",
+								"users",
+								"34579464"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\r\n    \"dni\": 34579464,\r\n    \"nombre\": \"Martin\",\r\n    \"apellido\": \"guevara\",\r\n    \"direccion\": \" 4525\"\r\n}"
+				}
+			]
+		},
+		{
+			"name": "PUT user",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "     {\r\n        \"nombre\": \"Martin\",\r\n        \"apellido\": \"guevara\",\r\n        \"direccion\": \" chaco 4525\"\r\n     }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/apires/users/34579464",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"apires",
+						"users",
+						"34579464"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "PUT user",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "     {\r\n        \"nombre\": \"Martin\",\r\n        \"apellido\": \"guevara\",\r\n        \"direccion\": \" Chaco 4525\"\r\n     }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/apires/users/34579464",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"apires",
+								"users",
+								"34579464"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\r\n    \"dni\": 34579464,\r\n    \"nombre\": \"Martin\",\r\n    \"apellido\": \"guevara\",\r\n    \"direccion\": \" chaco 4525\"\r\n}"
+				}
+			]
+		}
+	]
+}
