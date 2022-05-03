@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Ingreso de nuevo cliente.</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+</head>
+<body>
+<div class ="container">
+    <form th:acction="@{clientes/add}" th:object="${cliente}" method="post">
+
+        <label>DNI: </label>
+        <input type="text" name="dni" th:field="*{dni}"/>
+        <br>
+        <label>Nombre: </label>
+        <input type="text" name="nombre" th:field="*{nombre}"/>
+        <br>
+        <label>Apellido: </label>
+        <input type="text" name="apellido" th:field="*{apellido}"/>
+        <br>
+        <label>Email: </label>
+        <input type="text" name="email" th:field="*{email}"/>
+        <br>
+        <label>Direccion: </label>
+        <input type="text" name="direccion" th:field="*{direccion}"/>
+
+        <br>
+        <button type="submit">
+            Ingresar Cliente
+        </button>
+        <br>
+    </form>
+    <a th:href="@{/clientes}">Go back</a>
+</div>
+</body>
+</html>
