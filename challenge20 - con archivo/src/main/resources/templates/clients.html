@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts}">
+<head>
+    <title>Listado de clientes</title>
+</head>
+<body >
+
+<div layout:fragment="content">
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col-12 container justify-content-center card">
+                <h1 class = "text-center"> Listado de Clientes </h1>
+                <div class="card-body">
+                    <div th:classappend="'alert-' + (${clase != null} ? ${clase} : info)" th:if="${mensaje != null}"
+                         th:text="${mensaje}"
+                         class="alert">
+                    </div>
+                    <table class="table table-striped table-bordered">
+                        <thead class="table-dark">
+        <tr>
+            <th> DNI </th>
+            <th> Nombre </th>
+            <th> Apellido </th>
+            <th> Email </th>
+            <th> Direccion </th>
+            <th> Imagen </th>
+            <th> Acciones</th>
+
+        </tr>
+        </thead>
+        <tbody>
+            <tr th:each="client: ${clients}">
+            <td th:text = ${client.dni}></td>
+            <td th:text = ${client.apellido}></td>
+            <td th:text = ${client.nombre}></td>
+            <td th:text = ${client.email}></td>
+            <td th:text = ${client.direccion}></td>
+            <td><img class="float-right " th:src = "@{'/uploads/'+${client.foto}}"
+                 th:alt="${client.foto}" style="max-widht:90%;max-height:100%;"/></td>
+            <td>
+                <a th:href="@{/clients/edit/{id}(id=${client.id})}"
+                   class="btn btn-warning">Editar</a>
+
+                <a th:href="@{/clients/delete/{id}(id=${client.id})}"
+                   class="btn btn-danger">Eliminar</a>
+
+            </td>
+
+        </tr>
+        </tbody>
+    </table>
+</div>
+            </div>
+
+        </div>
+    </div>    </div>
+
+</body>
+</html>
