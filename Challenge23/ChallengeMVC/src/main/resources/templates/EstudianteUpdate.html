@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Modificar Estudiante</title>
+</head>
+<body>
+<form th:object="${estudiante}" th:action="@{/estudiantes/update/{dni}(dni = ${estudiante.dni})}" method="post">
+    <label>DNI: </label>
+    <input type="text" name="dni" th:field="*{dni}"/>
+    <br>
+    <label>Nombre: </label>
+    <input type="text" name="nombre" th:field="*{nombre}"/>
+    <br>
+    <label>Apellido: </label>
+    <input type="text" name="apellido" th:field="*{apellido}"/>
+    <br>
+    <label>Telefono: </label>
+    <input type="text" name="direccion" th:field="*{telefono}"/>
+
+    <br>
+    <button type="submit">
+        Actualizar Estudiante
+    </button>
+</form>
+<a th:href="@{/estudiantes/all}">Ir atras</a>
+</body>
+</html>

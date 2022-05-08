@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts}">
+<head>
+    <meta charset="UTF-8">
+    <title>Crear estudiante</title>
+
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
+</head>
+<body>
+
+<div class ="container">
+    <div style="text-align: center">
+        <form th:action="@{/estudiantes/create}" th:object="${estudiante}" method="post">
+            <div class="form-group">
+                <label>DNI: </label>
+                <input class="form-control" type="text" name="dni" th:field="*{dni}"/>
+                <br>
+                <label>Nombre: </label>
+                <input class="form-control" type="text" name="name" th:field="*{nombre}"/>
+                <br>
+                <label>Apellido: </label>
+                <input class="form-control" type="text" name="apellido" th:field="*{apellido}"/>
+                <br>
+                <label>Telefono: </label>
+                <input class="form-control" type="text"  name="telefono" th:field="*{telefono}"/>
+                <br>
+                <br>
+            </div>
+            <button class="btn btn-light" type="submit">
+                Ingresar
+            </button>
+            <br>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
